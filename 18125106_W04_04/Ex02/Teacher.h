@@ -10,7 +10,7 @@ private:
 	char*fullname;
 	int payRate;
 	int basicRate;
-	int numDay;
+	int dayOff;
 public:
 	Teacher();
 	Teacher(char*id);

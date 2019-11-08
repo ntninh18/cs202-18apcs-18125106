@@ -30,7 +30,9 @@ NV::NV()
 
 NV::NV(char * id)
 {
-	staffID = id;
+	staffID = new char[strlen(id) + 1];
+	strcpy(staffID, id);
+
 	fullname = nullptr;
 	dob = Date();
 	address = nullptr;
@@ -38,16 +40,24 @@ NV::NV(char * id)
 
 NV::NV(char * id, char * name)
 {
-	staffID = id;
-	fullname = name;
+	staffID = new char[strlen(id) + 1];
+	strcpy(staffID, id);
+
+	fullname = new char[strlen(name) + 1];
+	strcpy(fullname, name);
+
 	dob = Date();
 	address = nullptr;
 }
 
 NV::NV(char * id, char * name, Date bday)
 {
-	staffID = id;
-	fullname = name;
+	staffID = new char[strlen(id) + 1];
+	strcpy(staffID, id);
+
+	fullname = new char[strlen(name) + 1];
+	strcpy(fullname, name);
+
 	dob = bday;
 	address = nullptr;
 }

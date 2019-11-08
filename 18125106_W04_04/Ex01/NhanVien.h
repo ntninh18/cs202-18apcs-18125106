@@ -1,5 +1,6 @@
 #ifndef NHANVIEN_H
 #define NHANVIEN_H
+
 #include <iostream>
 #include <string.h>
 using namespace std;
