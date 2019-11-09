@@ -10,7 +10,7 @@ private:
 	int year;
 public:
 	Date();
-	Date(int day, int month, int year);
+	Date(int d, int m, int y);
 	void input();
 	void output();
 };

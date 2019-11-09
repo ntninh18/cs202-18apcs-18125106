@@ -6,8 +6,8 @@ class NVSX : public NV {
 private:
 	int numProduct;
 public:
-	NVSX() {};
-	NVSX(char* id) {};
+	NVSX();
+	NVSX(int num);
 	int salary();
 	void input();
 	void output();

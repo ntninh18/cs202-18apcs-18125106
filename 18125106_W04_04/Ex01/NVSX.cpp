@@ -1,5 +1,17 @@
 #include "NVSX.h"
 
+NVSX::NVSX()
+{
+	NV();
+	numProduct = 0;
+}
+
+NVSX::NVSX(int num)
+{
+	NV();
+	numProduct = num;
+}
+
 int NVSX::salary()
 {
 	return numProduct * 300000;

@@ -6,8 +6,8 @@ class NVCN : public NV {
 private:
 	int numDay;
 public:
-	NVCN() {};
-	NVCN(char* id) {};
+	NVCN();
+	NVCN(int num);
 	int salary();
 	void input();
 	void output();

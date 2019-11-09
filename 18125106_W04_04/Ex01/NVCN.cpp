@@ -1,5 +1,17 @@
 #include "NVCN.h"
 
+NVCN::NVCN()
+{
+	NV();
+	numDay = 0;
+}
+
+NVCN::NVCN(int num)
+{
+	NV();
+	numDay = num;
+}
+
 int NVCN::salary()
 {
 	return numDay * 300000;
