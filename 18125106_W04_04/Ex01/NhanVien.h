@@ -3,19 +3,8 @@
 
 #include <iostream>
 #include <string.h>
+#include "Date.h"
 using namespace std;
-
-class Date {
-private:
-	int day;
-	int month;
-	int year;
-public:
-	Date();
-	Date(int day, int month, int year);
-	void input();
-	void output();
-};
 
 class NV {
 private:

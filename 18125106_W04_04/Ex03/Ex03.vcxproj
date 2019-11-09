@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{274E6BE7-1BE4-411A-8B34-531933019D65}</ProjectGuid>
-    <RootNamespace>Ex01</RootNamespace>
+    <ProjectGuid>{E717D998-1CBA-4B7D-B605-9D581CFCFBFF}</ProjectGuid>
+    <RootNamespace>Ex03</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -76,7 +76,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -116,17 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Date.h" />
-    <ClInclude Include="NhanVien.h" />
-    <ClInclude Include="NVCN.h" />
-    <ClInclude Include="NVSX.h" />
+    <ClInclude Include="Reader.h" />
+    <ClInclude Include="VIPReader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Date.cpp" />
-    <ClCompile Include="NhanVien.cpp" />
-    <ClCompile Include="NVCN.cpp" />
-    <ClCompile Include="NVSX.cpp" />
+    <ClCompile Include="Reader.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="VIPReader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
