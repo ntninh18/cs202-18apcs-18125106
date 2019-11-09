@@ -1,10 +1,6 @@
 #ifndef NHANVIEN_H
 #define NHANVIEN_H
-
-#include <iostream>
-#include <string.h>
 #include "Date.h"
-using namespace std;
 
 class NV {
 private:

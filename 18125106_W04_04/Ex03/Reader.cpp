@@ -6,6 +6,7 @@ Reader::Reader()
 	fullname = nullptr;
 	dueDate = Date();
 	gender = nullptr;
+	numBook = 0;
 }
 Reader::Reader(char*id) 
 {
@@ -16,6 +17,7 @@ Reader::Reader(char*id)
 	fullname = nullptr;
 	dueDate = Date();
 	gender = nullptr;
+	numBook = 0;
 }
 Reader::Reader(char*id, char*name) 
 {
@@ -29,6 +31,7 @@ Reader::Reader(char*id, char*name)
 
 	dueDate = Date();
 	gender = nullptr;
+	numBook = 0;
 }
 Reader::Reader(char * id, char * name, Date date)
 {
@@ -42,6 +45,7 @@ Reader::Reader(char * id, char * name, Date date)
 
 	dueDate = date;
 	gender = nullptr;
+	numBook = 0;
 }
 Reader::Reader(char*id, char*name, Date date, char* sex)
 {
@@ -58,6 +62,26 @@ Reader::Reader(char*id, char*name, Date date, char* sex)
 	gender = new char[strlen(sex) + 1];
 	strcpy(gender, sex);
 	delete[] sex;
+
+	numBook = 0;
+}
+Reader::Reader(char*id, char*name, Date date, char* sex, int num)
+{
+	ID = new char[strlen(id) + 1];
+	strcpy(ID, id);
+	delete[] id;
+
+	ID = new char[strlen(name) + 1];
+	strcpy(ID, name);
+	delete[] name;
+
+	dueDate = date;
+
+	gender = new char[strlen(sex) + 1];
+	strcpy(gender, sex);
+	delete[] sex;
+
+	numBook = num;
 }
 
 void Reader::input()
@@ -80,5 +104,31 @@ void Reader::input()
 	strcpy(fullname, name);
 	delete[] name;
 
+	cout << "Enter due date: " << endl;
+	dueDate.input();
 
+	cout << "Enter gender: ";
+	delete[] gender;
+	char* sex = new char[100];
+	cin.ignore();
+	cin.getline(sex, 100);
+	gender = new char[strlen(sex) + 1];
+	strcpy(gender, sex);
+	delete[] sex;
+
+	cout << "Enter number of books borrowed: "; cin >> numBook;
+}
+void Reader::out() {
+	cout << endl << "--Reader info--" << endl;
+	cout << " ID: " << ID << endl;
+	cout << " Fullname: " << fullname << endl;
+	cout << " Due date: "; dueDate.output();
+	cout << endl << " Gender: " << gender << endl;
+}
+int Reader::fee() {
+	return numBook * 5000;
+}
+void Reader::output() {
+	out();
+	cout << " Monthly fee: " << fee() << endl << endl;
 }
