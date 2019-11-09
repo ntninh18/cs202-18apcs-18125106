@@ -33,3 +33,23 @@ int HTeacher::salary()
 {
 	return Teacher::salary() + bonus;
 }
+
+void HTeacher::input()
+{
+	Teacher::input();
+	cout << "Enter homeroom class: ";
+	delete[] HClass;
+	char* Class = new char[100];
+	cin.ignore();
+	cin.getline(Class, 100);
+	HClass = new char[strlen(Class) + 1];
+	strcpy(HClass, Class);
+	delete[] Class;
+}
+
+void HTeacher::output()
+{
+	Teacher::out();
+	cout << " Homeroom class: " << HClass << endl;
+	cout << "-> Salary: " << salary() << endl;
+}
