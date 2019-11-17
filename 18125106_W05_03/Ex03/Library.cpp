@@ -53,9 +53,7 @@ Reader * Library::highestFee()
 int Library::countReader()
 {
 	int count = 0;
-	for (int i = 0; i < a.size(); i++) {
-		if (a[i]->type() == 1) count++;
-	}
+	for (int i = 0; i < a.size(); i++) count++;
 	return count;
 }
 
