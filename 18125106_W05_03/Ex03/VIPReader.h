@@ -12,6 +12,7 @@ public:
 	VIPReader(char*id, char*name);
 	VIPReader(char*id, char*name, Date date);
 	VIPReader(char*id, char*name, Date date, char* sex);
+	int type() { return 2; };
 	int fee();
 	void output();
 };

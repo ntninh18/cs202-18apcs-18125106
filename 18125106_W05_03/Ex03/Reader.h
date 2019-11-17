@@ -18,9 +18,13 @@ public:
 	Reader(char*id, char*name, Date date, char* sex);
 	Reader(char*id, char*name, Date date, char* sex, int num);
 	int fee();
-	void input();
-	void out();
-	void output();
+	char* getID() { return ID; };
+	char* getName() { return fullname; };
+	int getDueDate() { return dueDate.getYear(); };
+	virtual int type() { return 1; };
+	virtual void input();
+	virtual void out();
+	virtual void output();
 };
 
 #endif

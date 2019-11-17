@@ -7,11 +7,11 @@ void University::inputList()
 	int n;
 	int type;
 	Teacher *p;
-	cout << "Enter number of staff: ";
+	cout << "Enter number of teachers: ";
 	cin >> n;
 	for (int i = 0; i < n; i++) {
-		cout << "Enter staff number " << i + 1 << "'s info: " << endl;
-		cout << "Staff type (1: Teacher; 2: Homeroom teacher): ";
+		cout << endl << "Enter teacher number " << i + 1 << "'s info: " << endl;
+		cout << "Teacher type (1: Teacher; 2: Homeroom teacher): ";
 		cin >> type;
 
 		p = NULL;

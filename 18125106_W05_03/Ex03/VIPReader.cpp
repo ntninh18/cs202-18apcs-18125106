@@ -4,6 +4,10 @@ VIPReader::VIPReader()
 {
 	Reader();
 }
+VIPReader::VIPReader(char * id)
+{
+	Reader(id);
+}
 VIPReader::VIPReader(char * id, char * name)
 {
 	Reader(id, name);

@@ -12,6 +12,7 @@ private:
 public:
 	Date();
 	Date(int d, int m, int y);
+	int getYear() { return year; };
 	void input();
 	void output();
 };
