@@ -32,3 +32,29 @@ void Library::outputList()
 	for (int i = 0; i < a.size(); i++)
 		a[i]->output();
 }
+
+int Library::totalFee()
+{
+	int sum = 0;
+	for (int i = 0; i < a.size(); i++) {
+		sum += a[i]->fee();
+	}
+	return sum;
+}
+
+Reader * Library::highestFee()
+{
+	Teacher* max = a[0];
+	for (int i = 0; i < a.size(); i++) {
+		if (a[i]->salary() > max->salary()) max = a[i];
+	}
+	return max;
+}
+int Library::countReader()
+{
+	int count = 0;
+	for (int i = 0; i < a.size(); i++) {
+		if (a[i]->type() == 1) count++;
+	}
+	return count;
+}

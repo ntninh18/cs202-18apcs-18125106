@@ -26,8 +26,6 @@ void Company::inputList() {
 	}
 }
 
-
-
 int Company::sumSalary() {
 	int sum = 0;
 	for (int i = 0; i < a.size(); i++) {
