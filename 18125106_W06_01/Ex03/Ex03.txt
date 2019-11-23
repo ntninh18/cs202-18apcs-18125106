@@ -1,0 +1,72 @@
+a.
+class EyedFace : public Face
+{
+private:
+	int eyes;
+	string shape;
+public:
+	EyedFace(string sh, int ey);
+	void show();
+	virtual EyedFace *clone();
+	~EyedFace();
+};
+
+void Face::show()
+{
+	cout << "Shape: " << shape << endl;
+}
+void EyedFace::show()
+{
+	Face::show();
+	cout << "Eyes: " << eyes << endl;
+}
+EyedFace *EyedFace::clone()
+{
+	return new EyedFace(shape, eyes);
+}
+
+EyedFace::EyedFace(string sh, int ey) : Face(sh)
+{
+	eyes = ey;
+}
+--------------------------
+b. Error at line 9 due to the lack of default constructor.
+As problem solved, program prints out:
+Shape: Rectangle
+Shape: Rectangle
+Shape: Rectangle
+The same 3 lines?
+--------------------------
+c. 
+// fix testFace
+void testFace(IFace *fc)
+{
+	// ...
+	delete a[1];
+	delete a[2];
+}
+
+// add count
+class EyedFace : public Face
+{
+	// ...
+	int count = 0;
+};
+EyedFace::EyedFace(string sh, int ey) : Face(sh)
+{
+	// ...
+	++count;
+}
+
+int main() {
+	// ...
+
+	EyedFace a("1", 1);
+	cout << a.count << endl;
+	EyedFace b("2", 2);
+	cout << b.count << endl;
+	EyedFace c("3", 3);
+	cout << c.count << endl;
+
+	return 0;
+}
