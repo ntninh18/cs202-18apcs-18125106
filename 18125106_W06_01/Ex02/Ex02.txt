@@ -2,7 +2,6 @@ a.
 class Bike
 {
 public:
-	Bike();
 	Bike(char *_brand);
 	~Bike();
 	// ...
@@ -11,10 +10,21 @@ public:
 class EBike : public Bike
 {
 public:
-	EBike() {};
 	EBike(char *_brand) : Bike(_brand) {};
 	// ...
 };
+int main() {
+	char a[] = "Honda";
+	char b[] = "Yamaha";
+	EBike b1(a), b2(b);
+	// ...
+}
+--------------------------
+b.
+Program prints out:
+Honda:48 Yamaha:48 
+
+--------------------------
 c.
 Class: a user defined data-type which has data members and functions
 Object: an instance of Class. When a class is defined, no memory is allocated but when an object is created, memory is allocated.

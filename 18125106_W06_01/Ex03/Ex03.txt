@@ -55,9 +55,25 @@ class EyedFace : public Face
 EyedFace::EyedFace(string sh, int ey) : Face(sh)
 {
 	// ...
-	++count;
+	count++;
 }
 
+void EyedFace::show()
+{
+	// ...
+	count++;
+}
+
+EyedFace *EyedFace::clone()
+{
+	// ...
+	count++;
+}
+
+EyedFace::~EyedFace()
+{
+	count--;
+}
 int main() {
 	// ...
 
