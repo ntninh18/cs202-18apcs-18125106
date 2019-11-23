@@ -1,9 +1,5 @@
 #include "Bike.h"
 
-Bike::Bike()
-{
-	brand = nullptr;
-}
 
 Bike::Bike(char *_brand)
 {

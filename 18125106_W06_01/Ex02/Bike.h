@@ -9,7 +9,6 @@ class Bike
 private:
 	char *brand; // hiệu xe
 public:
-	Bike();
 	Bike(char *_brand);
 	~Bike();
 	virtual void move(int t1) {
@@ -20,7 +19,6 @@ public:
 class EBike : public Bike
 {
 public:
-	EBike() {};
 	EBike(char *_brand) : Bike(_brand) {};
 	void move(int t2) {
 		Bike::move(t2 * 2);

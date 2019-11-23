@@ -25,11 +25,13 @@ void EyedFace::show()
 {
 	Face::show();
 	cout << "Eyes: " << eyes << endl;
+	count++;
 }
 
 EyedFace *EyedFace::clone()
 {
 	return new EyedFace(this->getShape(), eyes);
+	count++;
 }
 
 EyedFace::~EyedFace()
