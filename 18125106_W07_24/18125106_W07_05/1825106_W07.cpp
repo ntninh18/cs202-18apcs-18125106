@@ -1,7 +1,5 @@
 #pragma once
-#include <iostream>
-#include <string>
-using namespace std;
+#include "Fraction.h"
 
 template<class T>
 class MyVector {
@@ -37,14 +35,6 @@ public:
 	
 	void print();
 	void swap(T &a, T&b);
-};
-
-template<class T>
-class Fraction  {
-private:
-	int nu;
-	int de;
-public:
 };
 
 template<class T>
@@ -238,7 +228,7 @@ void MyVector<T>::reverse()
 template<class T>
 string MyVector<T>::toString()
 {
-	string ret="";
+	string ret = "";
 	for (int i = 0; i < size; i++) {
 		ret += to_string(arr[i]);
 		if (i == size - 1) return ret;
@@ -291,11 +281,8 @@ void MyVector<T>::swap(T & a, T & b)
 
 int main() {
 	MyVector<int> v1;
-	v1.print();
 
 	v1.add(10);
-	v1.print();
-
 	v1.add(20);
 	v1.add(30);
 	v1.add(25);
@@ -312,10 +299,29 @@ int main() {
 	v1.sortAsc();
 	v1.print();
 	v1.sortDesc();
+	v1.indexOf(10);
 	v1.print();
-	cout << "To string: \n";
-	cout<<v1.toString()<<endl;
-	//v1.print();
+	cout << "To string: " << v1.toString() << endl << endl;
+
+	MyVector<Fraction> v2;
+	Fraction f1(5, 6);
+	Fraction f2(2, 3);
+	Fraction f3(2, 5);
+
+	v2.add(f1);
+	v2.add(f2);
+	v2.add(f3);
+	v2.print();
+
+	v2.insert(0, 3);
+	v2.print();
+	v2.reverse();
+	v2.print();
+	v2.sortAsc();
+	v2.print();
+	v2.sortDesc();
+	v2.print();
+
 	system("pause");
 
 	return 0;
