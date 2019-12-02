@@ -34,7 +34,7 @@ public:
 	int count = 0;
 	EyedFace(string sh, int ey);
 	void show();
-	virtual EyedFace *clone();
+	EyedFace *clone();
 	~EyedFace();
 };
 

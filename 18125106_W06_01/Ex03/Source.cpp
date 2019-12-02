@@ -7,16 +7,15 @@ void testFace(IFace *fc)
 		a[i]->show();
 	}
 	cout << "The same 3 lines?" << endl;
-	delete a[1];
-	delete a[2];
+	delete a;
 }
 int main() {
 	Face fc;
 	Face fc1("Rectangle");
 	testFace(&fc1);
 
-	EyedFace e1("a", 1);
-	cout << e1.count << endl;
+	EyedFace a("a", 1);
+	cout << a.count << endl;
 
 	system("pause");
 	return 0;
